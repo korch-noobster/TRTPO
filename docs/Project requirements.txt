@@ -1,0 +1,19 @@
+Requirements Document 
+1 Introduction
+The goal of this project is to develop a bot for auto cards selling on the Steam market. After minimal user interaction with the trading platform, the bot will interact with the web browser via Selenium WebDriver and sell the cards in automatic mode.
+2 User Requirements
+2.1 Software Interfaces
+Interaction will occur with store.steampowered.com 
+2.2 User Interfaces
+After launching the application, a form will appear with a button to open a browser to the required website. After this, you’ll need to log into the system and switch to the marketplace. In the form there is a field for entering a markup to the minimum price of this card and there are 3 buttons: begin and end the sale and close the application.
+2.3 User Characteristics
+This application is designed for people who are involved in in-game purchases. The simplicity of the app will make it possible to use it without much training in handling the program. Focused on 12-35 years old gamers.
+2.4 Assumptions and Dependencies
+There may be a need to manually select a display only collector's items on the marketplace.  For instant sales you will need to confirm them in  mobile Steam app.
+3 System Requirements
+Sufficient for the correct operation of this application would be the presence of Windows and a web browser 
+3.1 Functional Requirements
+The possibility of selling cards on the Steam marketplace.
+3.2 Non-Functional Requirements
+3.2.1 SOFTWARE QUALITY ATTRIBUTES
+Because the reliability of this application will be supported by methods of protecting in-game trading operations (from Valve) the convenience of the interface and the trading speed will be a priority attribute in the development.
