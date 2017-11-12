@@ -45,7 +45,11 @@ namespace SteamTradeBot
                if (Items[i].GetAttribute("style") == "")
                {
                    System.Threading.Thread.Sleep(2000);
-                   Items[i].Click();
+                    IWebElement ItemBtn = null;
+                    ItemBtn = Items[i];
+                    Actions ItemClick = new Actions(Browser);
+                    ItemClick.MoveToElement(ItemBtn).Click().Perform();
+                   // Items[i].Click();
 
                    String DivText = "";
                    IWebElement SellBtn = null;
@@ -110,7 +114,7 @@ namespace SteamTradeBot
             Browser.Manage().Window.Maximize();
             Browser.Navigate().GoToUrl("http://store.steampowered.com");
            
-
+      
         }
 
         private void Close_Click(object sender, EventArgs e)
@@ -118,11 +122,7 @@ namespace SteamTradeBot
             Browser.Quit();
         }
 
-        private void Button1_Click(object sender, EventArgs e)
-        {
-            backgroundWorker1.RunWorkerAsync();
-        }
-
+  
         private void Stop_selling_Click(object sender, EventArgs e)
         {
             backgroundWorker1.CancelAsync();
@@ -131,6 +131,11 @@ namespace SteamTradeBot
         private void PriceChange_ValueChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void Start_selling_Click(object sender, EventArgs e)
+        {
+            backgroundWorker1.RunWorkerAsync();
         }
     }
 }

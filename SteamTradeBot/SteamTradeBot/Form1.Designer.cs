@@ -76,11 +76,11 @@
             this.Start_selling.TabIndex = 3;
             this.Start_selling.Text = "Начать продажу";
             this.Start_selling.UseVisualStyleBackColor = true;
+            this.Start_selling.Click += new System.EventHandler(this.Start_selling_Click);
             // 
             // backgroundWorker1
             // 
             this.backgroundWorker1.WorkerReportsProgress = true;
-            this.backgroundWorker1.WorkerSupportsCancellation = true;
             this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.Sell);
             // 
             // label1
